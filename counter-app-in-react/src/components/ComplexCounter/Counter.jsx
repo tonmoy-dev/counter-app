@@ -1,17 +1,6 @@
 import { useState } from "react";
 
-function Counter() {
-  // counter state
-  const [count, setCount] = useState(0);
-
-  // increment & decrement handlers which updates the count value.
-  const increment = () => {
-    setCount((prevCount) => prevCount + 1);
-  };
-  const decrement = () => {
-    setCount((prevCount) => prevCount - 1);
-  };
-
+function Counter({ count, increment, decrement }) {
   return (
     <div className="max-w-md mx-auto mt-10 space-y-5">
       <div className="p-4 h-auto flex flex-col items-center justify-center space-y-5 bg-white rounded shadow">
