@@ -50,13 +50,14 @@ function Counter({ count, increment, decrement, title }) {
 // mapStateToProps -> convert store state to props, mapDispatchToProps -> convert dispatch to props
 // ownProps -> provided props in the component itself
 
+/* Old way of Redux, when React works with class based components*/
 const mapStateToProps = (state, ownProps) => {
   // console.log(ownProps);
   return {
     count: state.count,
   };
 };
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     increment: (value) => dispatch(increment(value)),
     decrement: (value) => dispatch(decrement(value)),

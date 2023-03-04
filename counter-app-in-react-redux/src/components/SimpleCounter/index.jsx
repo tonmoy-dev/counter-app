@@ -1,4 +1,5 @@
 import Counter from "./Counter";
+import HooksCounter from "./HooksCounter";
 
 const SimpleCounter = () => {
   return (
@@ -7,7 +8,8 @@ const SimpleCounter = () => {
         Simple Counter Application
       </h1>
       {/* {Counter()} */}
-      <Counter title="simple counter" />
+      {/* <Counter title="simple counter" /> */}
+      <HooksCounter />
     </div>
   );
 };

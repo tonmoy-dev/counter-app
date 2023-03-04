@@ -8,13 +8,13 @@ const counterReducer = function (state = initialState, action) {
     case INCREMENT:
       return {
         ...state,
-        count: state.count + 1,
+        count: state.count + action.payload,
       };
       break;
     case DECREMENT:
       return {
         ...state,
-        count: state.count - 1,
+        count: state.count - action.payload,
       };
       break;
     default:
